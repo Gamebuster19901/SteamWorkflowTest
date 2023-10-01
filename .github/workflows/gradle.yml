@@ -29,5 +29,4 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Test Steam
-      run: sudo apt-get update
-      run: sudo apt-get install steam-installer
+      run: sudo apt-get update && install steam-installer
