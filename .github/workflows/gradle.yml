@@ -42,7 +42,7 @@ jobs:
       run: wget -O ~/steam.deb http://media.steampowered.com/client/installer/steam.deb
       
     - name: Install Steam
-      run: sudo gdebi ~/steam.deb -y
+      run: sudo gdebi -n ~/steam.deb
 
     - name: Run Steam
       run: steam
