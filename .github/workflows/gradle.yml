@@ -28,10 +28,15 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+        
+    - name: Add PPAs
+      run: "sudo add-apt-repository multiverse && sudo apt-get update"
+      
     - name: Cache APT Packages
       uses: awalsh128/cache-apt-pkgs-action@v1.3.0
       with:
         packages: steam
         version: "@latest"
+        
     - name: Test Steam
       run: sudo apt-get update && apt-get install steam-installer
